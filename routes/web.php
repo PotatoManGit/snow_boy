@@ -2,6 +2,8 @@
 
 use Illuminate\Support\Facades\Route;
 
+use App\Http\Controllers\S_WIndex;
+
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -13,7 +15,6 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-//    return view('welcome');
-    return "Web is OK";
-});
+
+// 定义主体路由
+Route::any("/", [S_WIndex::class, "S_WIndex"]);
